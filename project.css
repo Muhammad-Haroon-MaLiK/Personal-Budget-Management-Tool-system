@@ -1,0 +1,68 @@
+body {
+    background-color:rgb(62, 56, 56) ;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    background-color: #00000051;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    background-color: #00000051;
+    padding: 20px;
+    margin: 20px;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #166b17;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+.budget-section{
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+

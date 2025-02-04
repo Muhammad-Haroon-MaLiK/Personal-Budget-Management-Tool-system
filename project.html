@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Management System</title>
+    <link rel="stylesheet" href="project.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Personal Budget Management System</h1>
+    </header>
+    <main>
+        <section class="income-section">
+            <p id="intro">Welcome to the budget system</p>
+            <h2>Income</h2>
+            <form action="save_transaction.php" method="POST">
+                <label for="income-amount">Amount:</label>
+                <input type="number" name="amount" required>
+                
+                <label for="income-frequency">Frequency:</label>
+                <select name="frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            
+                <input type="hidden" name="type" value="income">
+                
+                <button type="submit">Add Income</button>
+            </form>
+            
+        </section>
+        
+        <section class="expense-section">
+            <h2>Expenses</h2>
+            <form action="save_transaction.php" method="POST">
+                <label for="expense-amount">Amount:</label>
+                <input type="number" name="amount" required>
+            
+                <label for="expense-frequency">Frequency:</label>
+                <select name="frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            
+                <label for="expense-category">Category:</label>
+                <select name="category">
+                    <option value="housing">Housing</option>
+                    <option value="food">Food</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select>
+            
+                <input type="hidden" name="type" value="expense">
+                
+                <button type="submit">Add Expense</button>
+            </form>
+            
+        </section>
+        
+        <section class="budget-section">
+            <h2>Available Balance</h2>
+            <p>Daily Balance: <span id="daily-balance">0</span></p>
+            <p>Weekly Balance: <span id="weekly-balance">0</span></p>
+            <p>Monthly Balance: <span id="monthly-balance">0</span></p>
+            <p>Total Balance: <span id="total-balance">0</span></p> 
+        </section>
+
+        <section class="transaction-history-section">
+            <h2>Transaction History</h2>
+            <ul id="transaction-history">
+               
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>
